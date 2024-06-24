@@ -14,12 +14,9 @@ def get_message():
     if request.method == 'POST':
         # get last message from user
         message = request.json.get('messages')
-        query = message[-1].get('content')[0].get('text')
-        if query:
-            response = phi3(query)
+        if message:
+            response = phi3(message)
             response = response.get("choices")[0].get("message").get("content")
-            with open('response.txt', 'w') as f:
-                f.write(response)
             return jsonify({"text": response})
         else:
             return jsonify({"error": "No query provided"})

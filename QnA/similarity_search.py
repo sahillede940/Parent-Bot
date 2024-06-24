@@ -13,7 +13,7 @@ def similarity_search(query: str = None):
     )
 
     vectordb = FAISS.load_local(
-        './faiss_index_ml_papers',
+        './DataProcessingPipeline/faiss_index_ml_papers',
         embeddings,
         allow_dangerous_deserialization=True,
     )
@@ -31,7 +31,7 @@ def similarity_search(query: str = None):
     for i in res:
         res2.append({"Document": str(i[0].page_content), "Similarity Score": i[1]})
 
-    with open("similarity_search.json", "w") as f:
-        json.dump(res2, f)
+    with open("./queries/similarity_search.json", "w") as f:
+        json.dump(res2, f, indent=4)
 
     return doc
