@@ -21,6 +21,7 @@ from PyPDF2 import PdfReader
 import PyPDF2
 import os
 
+
 def get_doc_data(embeddings):
     path_to_data = '../data/'
     files = os.listdir(path_to_data)

@@ -1,21 +1,28 @@
 from flask import Flask, request, jsonify
-from model import phi3
+from QnA.model import phi3
+# imstall cors
+from flask_cors import CORS
+
 
 app = Flask(__name__)
 path_to_data = '../data/'
+CORS(app)
 
-
+# flask --app app.py --debug run
 @app.route('/api/message', methods=['POST'])
 def get_message():
     if request.method == 'POST':
-        messages = request.json.get('messages')
-        response = phi3(
-            messages=messages,
-            max_tokens=1024,
-            temperature=0.7,
-            top_p=1
-        )
-        return jsonify({"response": response})
+        # get last message from user
+        message = request.json.get('messages')
+        query = message[-1].get('content')[0].get('text')
+        if query:
+            response = phi3(query)
+            response = response.get("choices")[0].get("message").get("content")
+            with open('response.txt', 'w') as f:
+                f.write(response)
+            return jsonify({"text": response})
+        else:
+            return jsonify({"error": "No query provided"})
 
 
 if __name__ == '__main__':
