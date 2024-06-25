@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 from QnA.model import phi3
 # imstall cors
 from flask_cors import CORS
+from config import Config
+
 
 
 app = Flask(__name__)
@@ -16,11 +18,15 @@ def get_message():
         message = request.json.get('messages')
         if message:
             response = phi3(message)
-            response = response.get("choices")[0].get("message").get("content")
             return jsonify({"text": response})
         else:
             return jsonify({"error": "No query provided"})
+        
+@app.route('/api/test', methods=['GET'])
+def test():
+    return jsonify({"text": "Hello World!"})
 
 
-if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+"""
+    Was tryping to use local embeddings model
+"""

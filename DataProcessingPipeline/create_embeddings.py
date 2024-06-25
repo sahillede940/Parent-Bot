@@ -2,7 +2,9 @@ from IPython.display import clear_output
 import os
 from langchain_community.vectorstores import FAISS
 from langchain_openai import AzureOpenAIEmbeddings
-from config import Config
+import sys
+sys.path.append("..")
+from ..config import Config
 
 
 # we create the embeddings if they do not already exist in the input folder
