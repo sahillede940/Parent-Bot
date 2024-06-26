@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from QnA.model import phi3
-# imstall cors
+
 from flask_cors import CORS
 from config import Config
 

@@ -1,3 +1,6 @@
+from .similarity_search import similarity_search
+from .promt_template import info_context, system_prompt, user_prompt
+from config import Config
 import json
 import os
 import ssl
@@ -5,13 +8,14 @@ import requests
 import sys
 sys.path.append("..")
 
-from config import Config
-from .promt_template import info_context, system_prompt, user_prompt
-from .similarity_search import similarity_search
 
 def allowSelfSignedHttps(allowed):
     if allowed and not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unverified_context', None):
         ssl._create_default_https_context = ssl._create_unverified_context
+
+
+ROLE = "user" if Config.PHI3_LOCATION == "azure" else "system"
+print(ROLE)
 
 
 def format_message(message):
@@ -19,8 +23,11 @@ def format_message(message):
     # get the last 2 messages from the user and last 2 message of the assistant
     req_message = []
     req_message.append({
-        "role": "system",
-        "content": system_prompt
+        "role": ROLE,
+        "content": system_prompt.format(
+            guardian_name="Rajesh Patel",
+            children_name="Aryan Patel"
+        )
     })
 
     max_conversation_to_feed = 2
@@ -35,7 +42,7 @@ def format_message(message):
     # delete the last message from the req_message
     req_message.pop()
     req_message.append({
-        "role": "system",
+        "role": ROLE,
         "content": info_context.format(
             context=similarity_search(query)
         )

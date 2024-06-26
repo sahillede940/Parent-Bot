@@ -4,14 +4,14 @@ from langchain_community.vectorstores import FAISS
 from langchain_openai import AzureOpenAIEmbeddings
 import sys
 sys.path.append("..")
-from ..config import Config
+from config import Config
+import ollama
+
 
 
 # we create the embeddings if they do not already exist in the input folder
 def create_embeddings(texts):
     if not os.path.exists('./embeddings' + '/index.faiss'):
-
-        print('Creating embeddings...\n\n')
 
         embeddings = AzureOpenAIEmbeddings(
             api_key=Config.AZURE_OPENAI_API_KEY,

@@ -1,16 +1,24 @@
 {
-    "model": "phi3",
-    "created_at": "2024-06-24T18:08:02.101654Z",
-    "message": {
-        "role": "assistant",
-        "content": " Hello! I'm here to assist with any questions you may have about our school resources for parents. Please feel free to ask your queries related to enrollment, academic programs, extracurricular activities, or parental involvement opportunities at the school. If your question pertains to a specific aspect of our curriculum or school policies, I'll do my best to provide relevant information using the resources available to me.\n\nIf you need guidance on how to access these resources or have concerns about your child's educational experience, don't hesitate to reach out!\n\nIf you have a question outside of this context, let me know and I can try to direct it appropriately based on our provided resources. If the information isn't available within those resources, please understand that some details may not be publicly disclosed due to privacy policies."
-    },
-    "done_reason": "stop",
-    "done": true,
-    "total_duration": 3857868250,
-    "load_duration": 649607416,
-    "prompt_eval_count": 160,
-    "prompt_eval_duration": 231664000,
-    "eval_count": 182,
-    "eval_duration": 2973857000
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": " On Friday, the menu includes Fish and Chips as the main course, with a vegetarian option of Cheese Quesadilla. The side dish is Coleslaw, with vegetables such as Peas and Carrots. For fruit, there are Watermelon Slices. The dessert is a Brownie, and you can choose between milk (skim or 1%) or water to drink.",
+                "role": "assistant",
+                "tool_calls": null
+            },
+            "stop_reason": 32007
+        }
+    ],
+    "created": 1719412828,
+    "id": "cmpl-7b940d7af8d54f5aa9574167ee58c971",
+    "model": "phi3-medium-4k",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 87,
+        "prompt_tokens": 2074,
+        "total_tokens": 2161
+    }
 }

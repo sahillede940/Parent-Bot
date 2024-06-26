@@ -16,4 +16,5 @@ class Config:
     AZURE_SEARCH_ENDPOINT = os.environ["AZURE_SEARCH_ENDPOINT"]
     INDEX_NAME = os.environ["INDEX_NAME"]  # Index name
     # PHI3_LOCATION = "azure"  # Location of Phi3
-    PHI3_LOCATION = "local"  # Location of Phi3
+    PHI3_LOCATION = "azure"  # Location of Phi3
+
