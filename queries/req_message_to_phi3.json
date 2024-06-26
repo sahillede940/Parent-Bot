@@ -6,27 +6,19 @@
         },
         {
             "role": "user",
-            "content": "Chess Club timings?"
+            "content": "Hi"
         },
         {
             "role": "assistant",
-            "content": " The Chess Club meets on Tuesdays from 3:30 PM to 5:00 PM in Room 101. The advisor for the club is Mrs. Smith. For more details, you can contact her at smith.chess@school.edu."
+            "content": " Hello Rajesh Patel, how can I assist you with Aryan's school resources today?"
         },
         {
             "role": "user",
-            "content": "what Extracurricular Activities school provides?"
-        },
-        {
-            "role": "assistant",
-            "content": " The school provides several extracurricular activities. These include Soccer, Chess Club, Drama Club, Robotics Club, Art Club, Music (Band), Science Club, and Physical Education. The activities are offered across various grades and have specific schedules, locations, and advisors. For example, Soccer is from 4th to 8th grade, scheduled Mondays and Wednesdays from 3:30 PM to 5:00 PM at the school's soccer field, under Coach Johnson."
+            "content": "Context: Parents\n \nand\n \nstudents\n \ncan\n \nvolunteer\n \nto\n \nhelp\n \nwith\n \nlibrary\n \nevents\n \nand\n \nactivities.\n \nPlease\n \ncontact\n \nMrs.\n \nParker\n \nfor\n \nmore\n \ninformation.\n\u25cf\nLibrary\n \nNewsletter:\n \nSign\n \nup\n \nfor\n \nthe\n \nmonthly\n \nlibrary\n \nnewsletter\n \nto\n \nstay\n \nupdated\n \non\n \nnew\n \narrivals,\n \nevents,\n \nand\n \nprograms.\n\u25cf\n\n"
         },
         {
             "role": "user",
-            "content": "Context: Weekly\n \nLunch\n \nMenu\nMonday\n\u25cf\nMain\n \nCourse:\n \nSpaghetti\n \nand\n \nMeatballs\n\u25cf\nVegetarian\n \nOption:\n \nSpaghetti\n \nwith\n \nMarinara\n \nSauce\n\u25cf\nSide\n \nDish:\n \nGarlic\n \nBread\n\u25cf\nVegetables:\n \nSteamed\n \nBroccoli\n\u25cf\nFruit:\n \nApple\n \nSlices\n\u25cf\nDessert:\n \nChocolate\n \nChip\n \nCookie\n\u25cf\nBeverage:\n \nMilk\n \nor\n \nWater\nTuesday\n\u25cf\nMain\n \nCourse:\n \nChicken\n \nTacos\n\u25cf\nVegetarian\n \nOption:\n \nVeggie\n \nTacos\n\u25cf\nSide\n \nDish:\n \nSpanish\n \nRice\n\u25cf\nVegetables:\n \nCorn\n \non\n \nthe\n \nCob\n\u25cf\nFruit:\n \nOrange\n \nWedges\n\u25cf\nDessert:\n \nVanilla\n \nPudding\n\u25cf\nBeverage:\n \nMilk\n \nor\n \nWater\nWednesday\n\u25cf\nMain\n \nCourse:\n \nVegetarian\n \nLasagna\n\u25cf\nVegetarian\n \nOption:\n \nSame\n \nas\n \nmain\n \ncourse\n\u25cf\nSide\n \nDish:\n \nGarlic\n \nBreadsticks\n\u25cf\nVegetables:\n \nMixed\n \nGreen\n \nSalad\n \nwith\n \nItalian\n \nDressing\n\u25cf\nFruit:\n \nBanana\n\u25cf\nDessert:\n \nOatmeal\n \nRaisin\n \nCookie\n\u25cf\nBeverage:\n \nMilk\n \nor\n \nWater\nThursday\n\u25cf\nMain\n \nCourse:\n \nBeef\n \nBurgers\n\u25cf\nVegetarian\n \nOption:\n \nVeggie\n \nBurgers\n\u25cf\nSide\n \nDish:\n \nSweet\n \nPotato\n \nFries\n\n\u25cf\nVegetables:\n \nCarrot\n \nSticks\n\u25cf\nFruit:\n \nGrapes\n\u25cf\nDessert:\n \nChocolate\n \nPudding\n\u25cf\nBeverage:\n \nMilk\n \nor\n \nWater\nFriday\n\u25cf\nMain\n \nCourse:\n \nFish\n \nand\n \nChips\n\u25cf\nVegetarian\n \nOption:\n \nCheese\n \nQuesadilla\n\u25cf\nSide\n \nDish:\n \nColeslaw\n\u25cf\nVegetables:\n \nPeas\n \nand\n \nCarrots\n\u25cf\nFruit:\n \nWatermelon\n \nSlices\n\u25cf\nDessert:\n \nBrownie\n\u25cf\nBeverage:\n \nMilk\n \nor\n \nWater\nNutritional\n \nInformation\nEach\n \nmeal\n \nis\n \ncarefully\n \nplanned\n \nto\n \nmeet\n \nthe\n \ndietary\n \nguidelines\n \nand\n \nnutritional\n \nneeds\n \nof\n \nstudents.\n \nFor\n \nspecific\n \ndietary\n \nconcerns\n \nor\n \nallergies,\n \nplease\n \ncontact\n \nthe\n \nschool\n \nnutritionist.\nNotes\n\u25cf\nAll\n \nmeals\n \nare\n \nserved\n \nwith\n \na\n \nchoice\n \nof\n \nmilk\n \n(skim\n \nor\n \n1%)\n \nor\n \nwater.\n\u25cf\nGluten-free\n \noptions\n \nare\n \navailable\n \nupon\n \nrequest.\n\u25cf\nPlease\n \nnotify\n \nthe\n \ncafeteria\n \nstaff\n \nof\n \nany\n \nfood\n \nallergies\n \nin\n \nadvance.\n\nArt\n \nClub\n\u25cf\nGrades:\n \n2nd\n \nto\n \n5th\n\u25cf\nSchedule:\n \nMondays,\n \n3:30\n \nPM\n \n-\n \n5:00\n \nPM\n\u25cf\nLocation:\n \nArt\n \nRoom\n\u25cf\nInstructor:\n \nMrs.\n \nLee\n\u25cf\nContact:\n \nlee.art@school.edu\nMusic\n \nBand\n\u25cf\nGrades:\n \n4th\n \nto\n \n8th\n\u25cf\nSchedule:\n \nWednesdays,\n \n3:30\n \nPM\n \n-\n \n5:00\n \nPM\n\u25cf\nLocation:\n \nMusic\n \nRoom\n\u25cf\nDirector:\n \nMr.\n \nGreen\n\u25cf\nContact:\n \ngreen.band@school.edu\nScience\n \nClub\n\u25cf\nGrades:\n \n5th\n \nto\n \n8th\n\u25cf\nSchedule:\n \nThursdays,\n \n3:30\n \nPM\n \n-\n \n5:00\n \nPM\n\u25cf\nLocation:\n \nScience\n \nLab\n\u25cf\nAdvisor:\n \nDr.\n \nCarter\n\u25cf\nContact:\n \ncarter.science@school.edu\nEnrollment\n \nInformation\n\u25cf\nSign-Up\n \nPeriod:\n \nAugust\n \n15\n \n-\n \nSeptember\n \n1\n\u25cf\nHow\n \nto\n \nEnroll:\n \nParents\n \ncan\n \nenroll\n \ntheir\n \nchildren\n \nby\n \nfilling\n \nout\n \nthe\n \nonline\n \nform\n \non\n \nthe\n \nschool's\n \nwebsite\n \nor\n \nby\n \ncontacting\n \nthe\n \nrespective\n \nactivity\n \nadvisor.\n\u25cf\nFees:\n \nSome\n \nactivities\n \nmay\n \nhave\n \nassociated\n \nfees\n \nfor\n \nmaterials\n \nor\n \nuniforms.\n \nPlease\n \ncheck\n \nwith\n \nthe\n \nactivity\n \nadvisor\n \nfor\n \nspecific\n \ndetails.\n\n"
-        },
-        {
-            "role": "user",
-            "content": "What's on the menu for Friday?"
+            "content": "Hi"
         }
     ],
     "max_tokens": 1024,

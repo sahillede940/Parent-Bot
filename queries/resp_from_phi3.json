@@ -5,20 +5,20 @@
             "index": 0,
             "logprobs": null,
             "message": {
-                "content": " On Friday, the menu includes Fish and Chips as the main course, with a vegetarian option of Cheese Quesadilla. The side dish is Coleslaw, with vegetables such as Peas and Carrots. For fruit, there are Watermelon Slices. The dessert is a Brownie, and you can choose between milk (skim or 1%) or water to drink.",
+                "content": " Hello Rajesh Patel, Mrs. Parker would be happy to provide more details on volunteering for library events with Aryan. Also, consider signing up for our monthly library newsletter to keep up with new arrivals and programs.",
                 "role": "assistant",
                 "tool_calls": null
             },
             "stop_reason": 32007
         }
     ],
-    "created": 1719412828,
-    "id": "cmpl-7b940d7af8d54f5aa9574167ee58c971",
+    "created": 1719422411,
+    "id": "cmpl-c2b43300d66b440fbb6438ffab9f80cb",
     "model": "phi3-medium-4k",
     "object": "chat.completion",
     "usage": {
-        "completion_tokens": 87,
-        "prompt_tokens": 2074,
-        "total_tokens": 2161
+        "completion_tokens": 50,
+        "prompt_tokens": 406,
+        "total_tokens": 456
     }
 }
