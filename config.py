@@ -16,5 +16,10 @@ class Config:
     AZURE_SEARCH_ENDPOINT = os.environ["AZURE_SEARCH_ENDPOINT"]
     INDEX_NAME = os.environ["INDEX_NAME"]  # Index name
     # PHI3_LOCATION = "azure"  # Location of Phi3
-    PHI3_LOCATION = "azure"  # Location of Phi3
-
+    PHI3_LOCATION = "local"  # Location of Phi3
+    # local
+    # azure
+    #  port
+    GUARDIAN_NAME = "Rajesh Patel"  # Guardian name
+    STUDENT_NAME = "Aryan Patel"  # Student name
+    SCHOOL_NAME = "St. Xavier's School"  # School name

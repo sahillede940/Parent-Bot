@@ -24,11 +24,10 @@ def similarity_search(query: str = None):
     res = vectordb.similarity_search_with_relevance_scores(query, k=10)
 
     doc = ""
-
     for i in res:
-        doc += str(i[0].page_content) + '\n\n'
         if (i[1] < 0.7):
             break
+        doc += str(i[0].page_content) + '\n\n'
 
     res2 = []
     for i in res:

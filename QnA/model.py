@@ -25,8 +25,9 @@ def format_message(message):
     req_message.append({
         "role": ROLE,
         "content": system_prompt.format(
-            guardian_name="Rajesh Patel",
-            children_name="Aryan Patel"
+            guardian_name=Config.GUARDIAN_NAME,
+            children_name=Config.STUDENT_NAME,
+            school_name=Config.SCHOOL_NAME
         )
     })
 
@@ -41,12 +42,14 @@ def format_message(message):
     query = context[-1]["content"][0]["text"]
     # delete the last message from the req_message
     req_message.pop()
-    req_message.append({
-        "role": ROLE,
-        "content": info_context.format(
-            context=similarity_search(query)
-        )
-    })
+    context = similarity_search(query)
+    if context:
+        req_message.append({
+            "role": ROLE,
+            "content": info_context.format(
+                context=similarity_search(query)
+            )
+        })
     req_message.append({
         "role": "user",
         "content": user_prompt.format(
@@ -62,7 +65,10 @@ def phi3(message, max_tokens=1024, temperature=0.7, top_p=1):
     print(Config.PHI3_LOCATION)
     messages = format_message(message)
 
-    if Config.PHI3_LOCATION == 'local':
+    if Config.PHI3_LOCATION == 'local' or Config.PHI3_LOCATION == 'port':
+        url = "http://localhost:11434/api/chat/"
+        # if Config.PHI3_LOCATION == 'port':
+        #     url = "https://jj8bzvnc-11434.inc1.devtunnels.ms/api/chat/"
         data = {
             "model": "phi3",
             "messages": messages,
@@ -70,7 +76,6 @@ def phi3(message, max_tokens=1024, temperature=0.7, top_p=1):
         }
         with open("./queries/req_message_to_phi3.json", "w") as f:
             json.dump(data, f, indent=4)
-        url = "http://localhost:11434/api/chat/"
 
         try:
             body = json.dumps(data)
