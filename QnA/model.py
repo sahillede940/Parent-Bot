@@ -1,3 +1,4 @@
+import tiktoken
 from .similarity_search import similarity_search
 from .promt_template import info_context, system_prompt, user_prompt
 from config import Config
@@ -7,6 +8,7 @@ import ssl
 import requests
 import sys
 sys.path.append("..")
+# import token size calculation function
 
 
 def allowSelfSignedHttps(allowed):
@@ -16,7 +18,6 @@ def allowSelfSignedHttps(allowed):
 
 ROLE = "user" if Config.PHI3_LOCATION == "azure" else "system"
 print(ROLE)
-
 
 def format_message(message):
 
@@ -31,7 +32,7 @@ def format_message(message):
         )
     })
 
-    max_conversation_to_feed = 2
+    max_conversation_to_feed = 1
     prev = -(max_conversation_to_feed * 2 + 1)
     context = message[prev:]
     for msg in context:
@@ -43,13 +44,13 @@ def format_message(message):
     # delete the last message from the req_message
     req_message.pop()
     context = similarity_search(query)
-    if context:
-        req_message.append({
-            "role": ROLE,
-            "content": info_context.format(
-                context=similarity_search(query)
-            )
-        })
+    req_message.append({
+        "role": ROLE,
+        "content": info_context.format(
+            context=similarity_search(
+                query) if context else "No context found"
+        )
+    })
     req_message.append({
         "role": "user",
         "content": user_prompt.format(
@@ -63,12 +64,12 @@ def format_message(message):
 def phi3(message, max_tokens=1024, temperature=0.7, top_p=1):
     allowSelfSignedHttps(True)
     print(Config.PHI3_LOCATION)
+
     messages = format_message(message)
+    content_for_slm = ""
 
     if Config.PHI3_LOCATION == 'local' or Config.PHI3_LOCATION == 'port':
         url = "http://localhost:11434/api/chat/"
-        # if Config.PHI3_LOCATION == 'port':
-        #     url = "https://jj8bzvnc-11434.inc1.devtunnels.ms/api/chat/"
         data = {
             "model": "phi3",
             "messages": messages,
@@ -83,6 +84,25 @@ def phi3(message, max_tokens=1024, temperature=0.7, top_p=1):
             response = req.json()
             with open("./queries/resp_from_phi3.json", "w") as f:
                 json.dump(response, f, indent=4)
+
+            for x in messages:
+                content_for_slm += x["content"] + " "
+            content_for_slm += response.get("message").get("content")
+
+            token_size = len(content_for_slm)
+
+            # make array in json and store token size for calculation of available tokens
+            with open("./queries/token_size.json", "r") as f:
+                # do not delete existing data in token_size.json
+                try:
+                    token_size_data = json.load(f)
+                except:
+                    token_size_data = []
+
+            with open("./queries/token_size.json", "w") as f:
+                token_size_data.append(token_size)
+                json.dump(token_size_data, f, indent=4)
+
             return response.get("message").get("content")
         except Exception as e:
             print(f"An error occurred: {e}")

@@ -2,8 +2,6 @@ from get_chunks import get_chunks
 from get_data import get_pdfs
 from create_embeddings import create_embeddings
 
-
-
 def data_processing_pipeline():
     # start loading data
 

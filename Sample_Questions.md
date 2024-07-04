@@ -7,15 +7,6 @@
 7. What's on the menu for Friday?
 8. Who is the point of contact for the Computer Science Lab Assignment, and what is the deadline?
 9. What sports teams can students join?
-10. What are the meeting times for the Debate Club?
-11. Can you provide the dates for the upcoming parent-teacher meetings?
-12. When is the Science Fair scheduled?
-13. How do we access the school’s online resources for students?
-14. Who can I contact regarding my child's progress in English?
-15. What are the lunch options for this week?
-16. Who oversees the Robotics Club, and when are their meetings?
-17. How can I volunteer for school events?
-18. When are the results for the mid-term exams announced?
 
 <!-- From BOT -->
 1. What are the borrowing policies at our child's school library?
